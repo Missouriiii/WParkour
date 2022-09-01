@@ -23,7 +23,7 @@ class ParkourCommand implements CommandExecutor {
     function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         if($command->getName() == "parkour"){
             if(!$sender instanceof Player) {
-                $sender->sendMessage((string) new Text("pleaseInGame", Text::getTranslatedString("warning"), Text::EXPLAIN));
+                $sender->sendMessage((string) new Text("§l§5»§r§c Please use this command in-game"!));
             } else {
                 if (isset(Parkour::$plays[strtolower($sender->getName())])){
                     $player = $sender;
